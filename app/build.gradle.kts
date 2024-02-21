@@ -1,15 +1,16 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.ceomeleshenko.myapplication"
+    namespace = "com.ceomeleshenko.sugarnotes"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ceomeleshenko.myapplication"
-        minSdk = 24
+        applicationId = "com.ceomeleshenko.sugarnotes"
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -52,14 +53,12 @@ android {
 dependencies {
 
     // room
-    implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    annotationProcessor("androidx.room:room-compiler:2.6.1")
-
-    // viewmodel-compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
-
-    // navigation-compose
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$room_version")
     implementation("androidx.navigation:navigation-compose:2.7.6")
 
     implementation("androidx.core:core-ktx:1.12.0")

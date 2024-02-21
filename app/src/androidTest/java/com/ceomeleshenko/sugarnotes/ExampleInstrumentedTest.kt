@@ -1,4 +1,4 @@
-package com.ceomeleshenko.myapplication
+package com.ceomeleshenko.sugarnotes
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

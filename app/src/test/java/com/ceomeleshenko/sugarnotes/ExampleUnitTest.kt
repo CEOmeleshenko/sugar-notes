@@ -1,4 +1,4 @@
-package com.ceomeleshenko.myapplication
+package com.ceomeleshenko.sugarnotes
 
 import org.junit.Test
 

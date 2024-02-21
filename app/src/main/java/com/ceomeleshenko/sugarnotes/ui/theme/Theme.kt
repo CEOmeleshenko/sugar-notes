@@ -1,4 +1,4 @@
-package com.ceomeleshenko.myapplication.ui.theme
+package com.ceomeleshenko.sugarnotes.ui.theme
 
 import android.app.Activity
 import android.os.Build
