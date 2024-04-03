@@ -49,7 +49,7 @@ fun NotesScreen(viewModel: NoteViewModel) {
 
 
 @Composable
-fun NoteItem(note: Note) {
+private fun NoteItem(note: Note) {
 //  TODO заменить хардкод на значения
     OutlinedCard(modifier = Modifier.fillMaxWidth()) {
         Row(modifier = Modifier.fillMaxWidth()) {
@@ -59,13 +59,13 @@ fun NoteItem(note: Note) {
                     .weight(0.8f)
             ) {
                 Text(
-                    text = note.glucose.toString() + "ммоль/л",
+                    text = note.glucose.toString() + " ммоль/л",
                 )
                 Text(
-                    text = note.bread.toString() + "ХЕ",
+                    text = note.bread.toString() + " ХЕ",
                 )
                 Text(
-                    text = note.insulin.toString() + "ЕД",
+                    text = note.insulin.toString() + " ЕД",
                 )
             }
             Column(

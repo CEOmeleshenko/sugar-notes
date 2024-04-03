@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SugarNotesApp</string>
+    
+    <string name="glucose">mmol/l</string>
+    <string name="bread">bread unit</string>
+    <string name="insulin">unit</string>
+
+    <string name="insulin_type_ultrashort">ultrashort</string>
+    <string name="insulin_type_short">short</string>
+    <string name="insulin_type_long">long</string>
 </resources>

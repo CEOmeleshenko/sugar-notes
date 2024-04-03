@@ -6,6 +6,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.Room
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.ceomeleshenko.sugarnotes.data.AppDatabase
 import com.ceomeleshenko.sugarnotes.data.entity.Note
 import kotlinx.coroutines.launch
@@ -15,7 +17,7 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         application.applicationContext,
         AppDatabase::class.java,
         "notes_database"
-    ).build()
+    ).fallbackToDestructiveMigration().build()
 
     val notes = database.notesDao().getAllNotes()
 
