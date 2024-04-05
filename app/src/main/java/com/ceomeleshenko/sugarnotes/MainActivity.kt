@@ -29,6 +29,7 @@ import androidx.navigation.compose.rememberNavController
 import com.ceomeleshenko.sugarnotes.data.entity.Note
 import com.ceomeleshenko.sugarnotes.ui.AddNoteScreen
 import com.ceomeleshenko.sugarnotes.ui.HomeScreen
+import com.ceomeleshenko.sugarnotes.ui.PreviewAddNoteScreen
 import com.ceomeleshenko.sugarnotes.ui.ProfileScreen
 import com.ceomeleshenko.sugarnotes.ui.note.NoteViewModel
 import com.ceomeleshenko.sugarnotes.ui.note.NotesScreen
@@ -48,9 +49,6 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
-
-
                     Column {
                         val navController = rememberNavController()
                         NavHost(navController = navController, startDestination = "Home") {
@@ -58,7 +56,8 @@ class MainActivity : ComponentActivity() {
                                 HomeScreen(viewModel, navController)
                             }
                             composable("AddNote") {
-                                AddNoteScreen(viewModel, navController)
+//                                AddNoteScreen(viewModel, navController)
+                                PreviewAddNoteScreen()
                             }
                             composable("Profile") {
                                 ProfileScreen(navController)
