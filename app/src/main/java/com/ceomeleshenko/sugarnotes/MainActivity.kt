@@ -56,8 +56,8 @@ class MainActivity : ComponentActivity() {
                                 HomeScreen(viewModel, navController)
                             }
                             composable("AddNote") {
-//                                AddNoteScreen(viewModel, navController)
-                                PreviewAddNoteScreen()
+                                AddNoteScreen(viewModel, navController)
+//                                PreviewAddNoteScreen()
                             }
                             composable("Profile") {
                                 ProfileScreen(navController)

@@ -35,43 +35,95 @@ fun HomeScreen(
     viewModel: NoteViewModel,
     navController: NavController
 ) {
-    Column {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(GreenPrimary)
+    )
+    {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.End
         ) {
             Icon(
                 imageVector = Icons.Rounded.Person,
                 contentDescription = "Profile",
-                Modifier
+                tint = Color.White,
+                modifier = Modifier
                     .width(40.dp)
                     .height(40.dp)
                     .clickable {
                         navController.navigate("Profile")
                     }
             )
+        }
+
+        Text(
+            text = "Месяц",
+            style = Typography.titleLarge,
+            modifier = Modifier
+                .padding(16.dp, 0.dp)
+        )
+
+        Text(
+            text = "Календарь",
+            style = Typography.titleLarge,
+            modifier = Modifier
+                .padding(16.dp, 0.dp)
+        )
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+        ) {
+            Box(
+                modifier = Modifier
+                    .width(260.dp)
+                    .height(90.dp)
+                    .clip(RoundedCornerShape(20.dp))
+                    .border(
+                        width = 1.dp,
+                        color = Color.Black,
+                        shape = RoundedCornerShape(20.dp)
+                    )
+                    .background(Color.White)
+            ) {
+
+            }
+
             Icon(
                 imageVector = Icons.Rounded.Add,
                 contentDescription = "Profile",
-                Modifier
-                    .width(40.dp)
-                    .height(40.dp)
+                modifier = Modifier
+                    .width(48.dp)
+                    .height(48.dp)
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(Color.White)
+                    .border(
+                        width = 1.dp,
+                        color = Color.Black,
+                        shape = RoundedCornerShape(10.dp)
+                    )
+                    .align(Alignment.Bottom)
                     .clickable {
                         navController.navigate("AddNote")
                     }
             )
         }
 
-        Divider(
+        Column(
             modifier = Modifier
-                .padding(horizontal = 16.dp, vertical = 16.dp)
-                .height(2.dp),
-            color = Color.Black
-        )
-
-        NotesScreen(viewModel)
+                .fillMaxSize()
+                .clip(RoundedCornerShape(20.dp, 20.dp, 0.dp, 0.dp))
+                .background(Color.White),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            NotesScreen(viewModel)
+        }
     }
 }
 
@@ -157,7 +209,9 @@ fun PreviewHomeScreen() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color.White)
+                .clip(RoundedCornerShape(20.dp, 20.dp, 0.dp, 0.dp))
+                .background(Color.White),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box(
                 modifier = Modifier
