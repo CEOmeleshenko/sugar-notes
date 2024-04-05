@@ -111,7 +111,7 @@ fun AddNoteScreen(
                     value = glucoseValue,
                     onValueChange = { newText ->
                         setText(filterDigits(newText))
-                        glucose = glucoseValue.toInt()
+                        if (glucoseValue.isNotEmpty()) glucose = newText.toInt()
                     },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     modifier = Modifier
@@ -169,6 +169,7 @@ fun AddNoteScreen(
                     value = breadValue,
                     onValueChange = { newText ->
                         setText(filterDigits(newText))
+                        if (breadValue != "") bread = newText.toInt()
                     },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     modifier = Modifier
@@ -208,6 +209,7 @@ fun AddNoteScreen(
                     value = insulinValue,
                     onValueChange = { newText ->
                         setText(filterDigits(newText))
+                        if (insulinValue != "") insulin = newText.toInt()
                     },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     modifier = Modifier
@@ -224,7 +226,7 @@ fun AddNoteScreen(
             modifier = Modifier
                 .align(Alignment.CenterHorizontally),
             onClick = {
-                val text = "${glucose}"
+                val text = "$glucose $bread $insulin"
                 Toast.makeText(navController.context, text, Toast.LENGTH_SHORT).show()
             }
         ) {
