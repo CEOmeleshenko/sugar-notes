@@ -34,6 +34,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
+import androidx.core.text.isDigitsOnly
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.ceomeleshenko.sugarnotes.data.entity.Note
@@ -68,7 +69,9 @@ fun AddNoteScreen(
                 modifier = Modifier
                     .width(40.dp)
                     .height(40.dp)
-                    .clickable { }
+                    .clickable {
+                        navController.navigate("Home")
+                    }
             )
         }
 
@@ -110,8 +113,8 @@ fun AddNoteScreen(
                 TextField(
                     value = glucoseValue,
                     onValueChange = { newText ->
-                        setText(filterDigits(newText))
-                        if (glucoseValue.isNotEmpty()) glucose = newText.toInt()
+                        setText(newText)
+                        if (newText.isDigitsOnly()) glucose = newText.toInt()
                     },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     modifier = Modifier
@@ -168,8 +171,8 @@ fun AddNoteScreen(
                 TextField(
                     value = breadValue,
                     onValueChange = { newText ->
-                        setText(filterDigits(newText))
-                        if (breadValue != "") bread = newText.toInt()
+                        setText(newText)
+                        if (breadValue.isDigitsOnly()) bread = newText.toInt()
                     },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     modifier = Modifier
@@ -208,8 +211,8 @@ fun AddNoteScreen(
                 TextField(
                     value = insulinValue,
                     onValueChange = { newText ->
-                        setText(filterDigits(newText))
-                        if (insulinValue != "") insulin = newText.toInt()
+                        setText(newText)
+                        if (insulinValue.isDigitsOnly()) insulin = newText.toInt()
                     },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     modifier = Modifier
@@ -227,7 +230,9 @@ fun AddNoteScreen(
                 .align(Alignment.CenterHorizontally),
             onClick = {
                 val text = "$glucose $bread $insulin"
-                Toast.makeText(navController.context, text, Toast.LENGTH_SHORT).show()
+                Toast.makeText(navController.context, "Запись добавлена", Toast.LENGTH_SHORT).show()
+                viewModel.insertNote(Note(glucose = glucose, bread = bread, insulin = insulin))
+                navController.navigate("Home")
             }
         ) {
             Text(text = "Добавить запись")

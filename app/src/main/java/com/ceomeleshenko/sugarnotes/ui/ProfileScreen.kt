@@ -40,6 +40,8 @@ fun ProfileScreen(navController: NavController) {
                         navController.navigate("Home")
                     }
             )
+
+            Text(text = "Экран профиля в разработке")
         }
     }
 }
