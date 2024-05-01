@@ -3,44 +3,39 @@ package com.ceomeleshenko.sugarnotes
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.ceomeleshenko.sugarnotes.ui.theme.SugarNotesTheme
+import com.ceomeleshenko.sugarnotes.data.DatabaseProvider
+import com.ceomeleshenko.sugarnotes.data.NoteDataSource
+import com.ceomeleshenko.sugarnotes.presentation.ui.theme.SugarNotesTheme
+import com.ceomeleshenko.sugarnotes.presentation.viewmodel.NoteViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             SugarNotesTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    val database = DatabaseProvider.getDatabase(applicationContext)
+                    val noteDataSource = NoteDataSource(database)
+                    val noteViewModel = NoteViewModel(noteDataSource)
+                    Row {
+                        Button(onClick = {
+                            noteViewModel.insertNote()
+                        }) {
+                            Text(text = "Add note")
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SugarNotesTheme {
-        Greeting("Android")
     }
 }

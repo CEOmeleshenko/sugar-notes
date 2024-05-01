@@ -1,4 +1,4 @@
-package com.ceomeleshenko.sugarnotes.ui.theme
+package com.ceomeleshenko.sugarnotes.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

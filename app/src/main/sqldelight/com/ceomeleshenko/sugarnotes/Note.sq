@@ -1,0 +1,14 @@
+CREATE TABLE Note (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    glucose REAL NOT NULL,
+    bread_units INTEGER NOT NULL ,
+    insulin INTEGER NOT NULL,
+    insulin_type TEXT NOT NULL,
+    date TEXT NOT NULL,
+    time TEXT NOT NULL
+);
+
+insertNote:
+INSERT INTO Note (glucose, bread_units, insulin, insulin_type, date, time)
+VALUES (?, ?, ?, ?, ?, ?);
+
