@@ -79,6 +79,9 @@ dependencies {
 //    implementation("io.ktor:ktor-client-cio:2.3.10")
 //    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
 
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
     implementation("io.insert-koin:koin-androidx-compose:3.6.0-wasm-alpha2")
 
     implementation("app.cash.sqldelight:android-driver:2.0.2")

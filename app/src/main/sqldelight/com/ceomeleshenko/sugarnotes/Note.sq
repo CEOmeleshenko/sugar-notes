@@ -12,3 +12,16 @@ insertNote:
 INSERT INTO Note (glucose, bread_units, insulin, insulin_type, date, time)
 VALUES (?, ?, ?, ?, ?, ?);
 
+selectNoteById:
+SELECT * FROM Note WHERE id = ?;
+
+selectNotesByDate:
+SELECT * FROM Note WHERE date = ?;
+
+updateNote:
+UPDATE Note
+SET glucose = ?, bread_units = ?, insulin = ?, insulin_type = ?, date = ?, time = ?
+WHERE id = ?;
+
+deleteNote:
+DELETE FROM Note WHERE id = ?;

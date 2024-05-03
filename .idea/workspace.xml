@@ -9,37 +9,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/DatabaseProvider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteDataSource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/viewmodel/NoteViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/sqldelight/com/ceomeleshenko/sugarnotes/Note.sq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+    <list default="true" id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="Добавлены новые зависимости, протестирована новая база данных">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/SugarNotesApp.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/di/AppModules.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screen/HomeScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screen/StatisticScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/ui/theme/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/theme/Color.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/theme/Theme.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/ui/theme/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/theme/Type.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/InsulinType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/domain/models/InsulinType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/theme/Theme.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/viewmodel/NoteViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/viewmodel/NoteViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/sqldelight/com/ceomeleshenko/sugarnotes/Note.sq" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/sqldelight/com/ceomeleshenko/sugarnotes/Note.sq" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,12 +85,17 @@
         <option value="SqlDelight Table" />
         <option value="Kotlin Object" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin Enum" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -128,11 +119,11 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Andrey/Code/sugar-notes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Android/Android Studio/russian-aot.dic&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Suggestions&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;emulator&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
     &quot;stored_options&quot;: &quot;{\&quot;dialectConnections\&quot;:{\&quot;app.cash.sqldelight.dialects.sqlite_3_18.SqliteDialect\&quot;:{\&quot;orderedOptions\&quot;:[],\&quot;serializedProperties\&quot;:{}}}}&quot;
   }
 }</component>
@@ -146,6 +137,8 @@
       <recent name="C:\Users\Andrey\Code\sugar-notes\app\src\main\sqldelight" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.ceomeleshenko.sugarnotes.domain.models" />
+      <recent name="com.ceomeleshenko.sugarnotes" />
       <recent name="com.ceomeleshenko.sugarnotes.presentation" />
       <recent name="com.ceomeleshenko.sugarnotes.ui" />
     </key>
@@ -232,7 +225,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="2" Folder0="C:\Program Files\Android\Android Studio" Folder1="C:\Program Files\Android\Android Studio" CustomDictionaries="2" CustomDictionary0="C:\Program Files\Android\Android Studio\russian-aot.aff" CustomDictionary1="C:\Program Files\Android\Android Studio\russian-aot.dic" DefaultDictionary="application-level" UseSingleDictionary="false" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="" />
@@ -241,6 +234,15 @@
       <option name="presentableId" value="Default" />
       <updated>1713173729873</updated>
     </task>
+    <task id="LOCAL-00001" summary="Добавлены новые зависимости, протестирована новая база данных">
+      <option name="closed" value="true" />
+      <created>1714594903220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714594903220</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,5 +255,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавлены новые зависимости, протестирована новая база данных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены новые зависимости, протестирована новая база данных" />
   </component>
 </project>
