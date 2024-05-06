@@ -8,7 +8,6 @@ import com.ceomeleshenko.sugarnotes.domain.models.InsulinType
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
-import org.koin.compose.koinInject
 import java.time.LocalDate
 import java.time.LocalTime
 

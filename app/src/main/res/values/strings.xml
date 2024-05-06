@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SugarNotes</string>
+
+    <string name="navbar_item_home">Home</string>
+    <string name="navbar_item_statistic">Statistic</string>
+    <string name="navbar_item_add">Add Note</string>
 </resources>

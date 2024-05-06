@@ -1,6 +1,5 @@
 package com.ceomeleshenko.sugarnotes.di
 
-import com.ceomeleshenko.sugarnotes.Database
 import com.ceomeleshenko.sugarnotes.data.DatabaseProvider
 import com.ceomeleshenko.sugarnotes.data.NoteRepository
 import com.ceomeleshenko.sugarnotes.data.NoteRepositoryImpl

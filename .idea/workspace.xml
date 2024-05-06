@@ -9,23 +9,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="Добавлены новые зависимости, протестирована новая база данных">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/SugarNotesApp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/di/AppModules.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screen/HomeScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screen/StatisticScreen.kt" afterDir="false" />
+    <list default="true" id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="Добавлена навигационная панель">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/BottomNavigationBar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/AddNoteScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/HomeScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/InsulinType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/domain/models/InsulinType.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteDataSource.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/theme/Theme.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screen/HomeScreen.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screen/StatisticScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/StatisticScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/viewmodel/NoteViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/viewmodel/NoteViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/sqldelight/com/ceomeleshenko/sugarnotes/Note.sq" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/sqldelight/com/ceomeleshenko/sugarnotes/Note.sq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714594903220</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавлена реализация зависимостей Koin, работы с базой данных, прочие изменения">
+      <option name="closed" value="true" />
+      <created>1714751735022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714751735022</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,6 +261,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавлены новые зависимости, протестирована новая база данных" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены новые зависимости, протестирована новая база данных" />
+    <MESSAGE value="Добавлена реализация зависимостей Koin, работы с базой данных, прочие изменения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена реализация зависимостей Koin, работы с базой данных, прочие изменения" />
   </component>
 </project>
