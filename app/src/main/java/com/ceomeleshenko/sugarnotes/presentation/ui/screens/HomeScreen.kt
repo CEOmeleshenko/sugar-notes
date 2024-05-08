@@ -9,6 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import com.ceomeleshenko.sugarnotes.presentation.ui.components.NotesSection
 import com.ceomeleshenko.sugarnotes.presentation.viewmodel.NoteViewModel
 import org.koin.androidx.compose.koinViewModel
 
@@ -21,20 +22,16 @@ fun HomeScreen(
     Column {
         Row {
             Button(onClick = {
-            viewModel.insertNote()
+                viewModel.insertNote()
             }) {
                 Text(text = "Add note")
             }
             Button(onClick = {
-            viewModel.deleteNote()
+                viewModel.deleteNote()
             }) {
                 Text(text = "Delete note")
             }
         }
-        LazyColumn {
-            items(notes) { note ->
-                Text(text = note.id.toString())
-            }
-        }
+        NotesSection()
     }
 }

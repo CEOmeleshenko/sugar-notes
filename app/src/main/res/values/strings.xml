@@ -4,4 +4,13 @@
     <string name="navbar_item_home">Home</string>
     <string name="navbar_item_statistic">Statistic</string>
     <string name="navbar_item_add">Add Note</string>
+
+    <string name="unit_glucose">mmol/l</string>
+    <string name="unit_bread">bread unit</string>
+    <string name="unit_insulin">unit</string>
+    <string name="unit_no_data">n/a</string>
+
+    <string name="insulin_type_ultrashort">ultrashort</string>
+    <string name="insulin_type_short">short</string>
+    <string name="insulin_type_long">long</string>
 </resources>

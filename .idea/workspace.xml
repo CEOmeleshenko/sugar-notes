@@ -9,18 +9,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="Добавлена навигационная панель">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/BottomNavigationBar.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/AddNoteScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/HomeScreen.kt" afterDir="false" />
+    <list default="true" id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="Добавлена нижняя навигационная панель, незначительные изменения">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/NotesSection.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screen/HomeScreen.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screen/StatisticScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/StatisticScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/viewmodel/NoteViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/viewmodel/NoteViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/domain/models/InsulinType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/models/InsulinType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/BottomNavigationBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/BottomNavigationBar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/HomeScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -118,6 +118,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Suggestions&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
     &quot;stored_options&quot;: &quot;{\&quot;dialectConnections\&quot;:{\&quot;app.cash.sqldelight.dialects.sqlite_3_18.SqliteDialect\&quot;:{\&quot;orderedOptions\&quot;:[],\&quot;serializedProperties\&quot;:{}}}}&quot;
   }
@@ -245,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714751735022</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавлена нижняя навигационная панель, незначительные изменения">
+      <option name="closed" value="true" />
+      <created>1715006765241</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715006765241</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +271,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавлены новые зависимости, протестирована новая база данных" />
     <MESSAGE value="Добавлена реализация зависимостей Koin, работы с базой данных, прочие изменения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена реализация зависимостей Koin, работы с базой данных, прочие изменения" />
+    <MESSAGE value="Добавлена нижняя навигационная панель, незначительные изменения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена нижняя навигационная панель, незначительные изменения" />
   </component>
 </project>

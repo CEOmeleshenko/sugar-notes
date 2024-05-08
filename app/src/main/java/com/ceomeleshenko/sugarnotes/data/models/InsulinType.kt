@@ -1,4 +1,4 @@
-package com.ceomeleshenko.sugarnotes.domain.models
+package com.ceomeleshenko.sugarnotes.data.models
 
 enum class InsulinType {
     SHORT,

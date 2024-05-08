@@ -4,7 +4,7 @@ import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
 import com.ceomeleshenko.sugarnotes.Database
 import com.ceomeleshenko.sugarnotes.Note
-import com.ceomeleshenko.sugarnotes.domain.models.InsulinType
+import com.ceomeleshenko.sugarnotes.data.models.InsulinType
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
@@ -22,7 +22,7 @@ interface NoteRepository {
         insulin: Long = 0,
         insulin_type: String = InsulinType.SHORT.toString(),
         date: String = LocalDate.now().toString(),
-        time: String = LocalTime.now().toString()
+        time: String = LocalTime.now().withSecond(0).withNano(0).toString()
     )
 
     suspend fun deleteNote(id: Long)

@@ -1,5 +1,6 @@
 package com.ceomeleshenko.sugarnotes.presentation.ui.components
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Info
@@ -47,7 +49,7 @@ fun BottomNavigationBar(navController: NavController) {
                 horizontalArrangement = Arrangement.Start,
                 modifier = Modifier.padding(0.dp, 0.dp, 24.dp, 0.dp)
             ) {
-                items.forEachIndexed { index, item ->
+                items.forEach { item ->
                     NavigationBarItem(
                         icon = {
                             Icon(
@@ -76,7 +78,8 @@ fun BottomNavigationBar(navController: NavController) {
             FloatingActionButton(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .offset(x = (-12).dp, y = (-30).dp),
+                    .offset(x = (-16).dp, y = (-30).dp),
+                shape = RoundedCornerShape(40.dp),
                 onClick = { navController.navigate(NavigationItem.AddNote.route) }
             ) {
                 Icon(

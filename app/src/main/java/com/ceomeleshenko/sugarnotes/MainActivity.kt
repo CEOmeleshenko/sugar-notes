@@ -17,30 +17,35 @@ import com.ceomeleshenko.sugarnotes.presentation.ui.screens.AddNoteScreen
 import com.ceomeleshenko.sugarnotes.presentation.ui.screens.HomeScreen
 import com.ceomeleshenko.sugarnotes.presentation.ui.screens.StatisticScreen
 import com.ceomeleshenko.sugarnotes.presentation.ui.theme.SugarNotesTheme
+import org.koin.android.ext.android.getKoin
+import org.koin.compose.KoinContext
+import org.koin.core.context.KoinContext
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val navController = rememberNavController()
+            KoinContext {
+                SugarNotesTheme {
+                    val navController = rememberNavController()
 
-            SugarNotesTheme {
-                Scaffold(
-                    modifier = Modifier
-                        .background(MaterialTheme.colorScheme.background)
-                        .fillMaxSize(),
-                    bottomBar = {
-                        BottomNavigationBar(navController = navController)
-                    }
-                ) { paddingValues ->
-                    NavHost(
-                        navController = navController,
-                        startDestination = "Home",
-                        modifier = Modifier.padding(paddingValues)
-                    ) {
-                        composable("Home") { HomeScreen() }
-                        composable("Statistic") { StatisticScreen() }
-                        composable("AddNote") { AddNoteScreen() }
+                    Scaffold(
+                        modifier = Modifier
+                            .background(MaterialTheme.colorScheme.background)
+                            .fillMaxSize(),
+                        bottomBar = {
+                            BottomNavigationBar(navController = navController)
+                        }
+                    ) { paddingValues ->
+                        NavHost(
+                            navController = navController,
+                            startDestination = "Home",
+                            modifier = Modifier.padding(paddingValues)
+                        ) {
+                            composable("Home") { HomeScreen() }
+                            composable("Statistic") { StatisticScreen() }
+                            composable("AddNote") { AddNoteScreen() }
+                        }
                     }
                 }
             }
