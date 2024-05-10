@@ -18,7 +18,7 @@ interface NoteRepository {
 
     suspend fun insertNote(
         glucose: Double = 0.0,
-        bread_units: Long = 0,
+        food: Long = 0,
         insulin: Long = 0,
         insulin_type: String = InsulinType.SHORT.toString(),
         date: String = LocalDate.now().toString(),
@@ -43,7 +43,7 @@ class NoteRepositoryImpl(database: Database) : NoteRepository {
 
     override suspend fun insertNote(
         glucose: Double,
-        bread_units: Long,
+        food: Long,
         insulin: Long,
         insulin_type: String,
         date: String,
@@ -51,7 +51,7 @@ class NoteRepositoryImpl(database: Database) : NoteRepository {
     ) {
         withContext(Dispatchers.IO) {
             queries.insertNote(
-                glucose, bread_units, insulin, insulin_type, date, time
+                glucose, food, insulin, insulin_type, date, time
             )
         }
     }
@@ -65,7 +65,7 @@ class NoteRepositoryImpl(database: Database) : NoteRepository {
     override suspend fun updateNote(note: Note) {
         withContext(Dispatchers.IO) {
             note.apply {
-                queries.updateNote(glucose, bread_units, insulin, insulin_type, date, time, id)
+                queries.updateNote(glucose, food, insulin, insulin_type, date, time, id)
             }
         }
     }

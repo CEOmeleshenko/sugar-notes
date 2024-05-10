@@ -6,11 +6,16 @@
     <string name="navbar_item_add">Add Note</string>
 
     <string name="unit_glucose">mmol/l</string>
-    <string name="unit_bread">bread unit</string>
+    <string name="unit_food">bread unit</string>
     <string name="unit_insulin">unit</string>
     <string name="unit_no_data">n/a</string>
 
-    <string name="insulin_type_ultrashort">ultrashort</string>
     <string name="insulin_type_short">short</string>
     <string name="insulin_type_long">long</string>
+
+    <string name="add_note_section_glucose">Blood sugar</string>
+    <string name="add_note_section_insulin">Insulin</string>
+    <string name="add_note_section_food">Food</string>
+
+    <string name="button_add_note">Add note</string>
 </resources>

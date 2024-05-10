@@ -1,6 +1,7 @@
 package com.ceomeleshenko.sugarnotes.presentation.ui.components
 
 import androidx.compose.animation.animateContentSize
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -15,6 +16,7 @@ import androidx.compose.material.icons.rounded.Info
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -47,7 +49,9 @@ fun BottomNavigationBar(navController: NavController) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Start,
-                modifier = Modifier.padding(0.dp, 0.dp, 24.dp, 0.dp)
+                modifier = Modifier
+                    .padding(0.dp, 0.dp, 24.dp, 0.dp)
+                    .background(MaterialTheme.colorScheme.inverseOnSurface)
             ) {
                 items.forEach { item ->
                     NavigationBarItem(
@@ -102,7 +106,7 @@ private fun BottomNavigationBarPreview() {
     }
 }
 
-private sealed class NavigationItem(
+sealed class NavigationItem(
     val route: String,
     val icon: ImageVector,
     val title: Int

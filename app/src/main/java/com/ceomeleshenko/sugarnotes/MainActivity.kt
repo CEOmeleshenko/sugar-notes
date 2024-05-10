@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
                         ) {
                             composable("Home") { HomeScreen() }
                             composable("Statistic") { StatisticScreen() }
-                            composable("AddNote") { AddNoteScreen() }
+                            composable("AddNote") { AddNoteScreen(navController) }
                         }
                     }
                 }
