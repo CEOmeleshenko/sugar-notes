@@ -18,4 +18,6 @@
     <string name="add_note_section_food">Food</string>
 
     <string name="button_add_note">Add note</string>
+    <string name="button_select">Select</string>
+    <string name="button_cancel">Cancel</string>
 </resources>

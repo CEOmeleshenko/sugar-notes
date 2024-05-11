@@ -1,4 +1,4 @@
-package com.ceomeleshenko.sugarnotes.presentation.ui.components
+package com.ceomeleshenko.sugarnotes.presentation.ui.sections
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background

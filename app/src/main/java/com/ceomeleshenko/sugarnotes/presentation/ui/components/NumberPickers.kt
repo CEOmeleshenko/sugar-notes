@@ -1,36 +1,24 @@
 package com.ceomeleshenko.sugarnotes.presentation.ui.components
 
-import android.util.Log
-import androidx.compose.foundation.ScrollState
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.onFocusEvent
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.withContext
+import com.ceomeleshenko.sugarnotes.presentation.ui.theme.Typography
 
 @Composable
 fun HorizontalNumberPicker(
@@ -50,7 +38,8 @@ fun HorizontalNumberPicker(
 
     LazyRow(
         state = lazyListState,
-        modifier = modifier
+        verticalAlignment = Alignment.Bottom,
+        modifier = modifier.height(40.dp)
     ) {
         items(numbers) { number ->
             NumberItem(
@@ -62,7 +51,7 @@ fun HorizontalNumberPicker(
     }
 
     LaunchedEffect(selectedIndex) {
-        lazyListState.animateScrollToItem(if (selectedIndex - 2 >= 0) selectedIndex - 2 else 0)
+        lazyListState.animateScrollToItem(if (selectedIndex - 3 >= 0) selectedIndex - 3 else 0)
     }
 }
 
@@ -107,14 +96,20 @@ private fun NumberItem(
     onNumberSelected: (Number) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val textColor = if (isSelected) Color.Red else Color.Black
+    val textColor =
+        if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+    val fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
+    val style = if (isSelected) Typography.titleMedium else Typography.titleSmall
     val text = if (number is Double) number.toFloat().toString() else number.toString()
     Text(
         color = textColor,
+        fontWeight = fontWeight,
+        style = style,
         text = text,
         modifier = modifier
             .clickable { onNumberSelected(number) }
             .padding(horizontal = 4.dp, vertical = 2.dp)
             .wrapContentSize(Alignment.Center)
+            .animateContentSize()
     )
 }
