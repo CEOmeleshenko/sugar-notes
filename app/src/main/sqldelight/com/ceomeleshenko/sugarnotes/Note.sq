@@ -16,7 +16,7 @@ selectNoteById:
 SELECT * FROM Note WHERE id = ?;
 
 selectNotesByDate:
-SELECT * FROM Note WHERE date = ?;
+SELECT * FROM Note WHERE date = ? ORDER BY time;
 
 updateNote:
 UPDATE Note

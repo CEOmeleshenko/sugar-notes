@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -33,7 +34,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun NotesSection(viewModel: NoteViewModel = koinViewModel()) {
-    val notes by viewModel.notes.collectAsState(initial = emptyList())
+    val notes by viewModel.notes.collectAsState()
 
     LazyColumn(
         modifier = Modifier.animateContentSize(),
@@ -148,8 +149,4 @@ private fun NoteItem(
             }
         }
     }
-}
-
-private fun getGradient(startColor: Color, endColor: Color): Brush {
-    return Brush.horizontalGradient(listOf(startColor, endColor))
 }

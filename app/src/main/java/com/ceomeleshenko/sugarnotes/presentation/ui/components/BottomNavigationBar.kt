@@ -51,7 +51,6 @@ fun BottomNavigationBar(navController: NavController) {
                 horizontalArrangement = Arrangement.Start,
                 modifier = Modifier
                     .padding(0.dp, 0.dp, 24.dp, 0.dp)
-                    .background(MaterialTheme.colorScheme.inverseOnSurface)
             ) {
                 items.forEach { item ->
                     NavigationBarItem(

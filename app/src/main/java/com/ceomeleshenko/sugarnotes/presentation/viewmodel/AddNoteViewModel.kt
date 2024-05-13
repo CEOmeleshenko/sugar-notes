@@ -31,7 +31,9 @@ class AddNoteViewModel(private val noteRepository: NoteRepository) : ViewModel()
                 glucose = glucoseValue,
                 food = foodValue,
                 insulin = insulinValue,
-                insulin_type = insulinType.toString()
+                insulin_type = insulinType.toString(),
+                date = dateValue,
+                time = timeValue
             )
         }
     }
