@@ -1,10 +1,9 @@
 package com.ceomeleshenko.sugarnotes.presentation.viewmodel
 
-import android.icu.text.DecimalFormat
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableLongStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
@@ -14,11 +13,13 @@ import com.ceomeleshenko.sugarnotes.data.NoteRepository
 import com.ceomeleshenko.sugarnotes.data.models.InsulinType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
+import java.math.RoundingMode
 import java.time.LocalDate
 
-class NoteViewModel(private val noteRepository: NoteRepository) : ViewModel() {
+class NotesViewModel(private val noteRepository: NoteRepository) : ViewModel() {
 
-    var averageGlucose by mutableFloatStateOf(0.0f)
+    var dailyTasks by mutableIntStateOf(0)
+    var averageGlucose by mutableDoubleStateOf(0.0)
     var averageFood by mutableFloatStateOf(0.0f)
     var averageInsulin by mutableFloatStateOf(0.0f)
 
@@ -27,15 +28,8 @@ class NoteViewModel(private val noteRepository: NoteRepository) : ViewModel() {
 
     val notes = MutableStateFlow<List<Note>>(emptyList())
 
-    private fun observeNotes() {
-        viewModelScope.launch {
-            noteRepository.selectNotesByDate(dateValue).collect {
-                notes.value = it
-                setAverageGlucose()
-                setAverageFood()
-                setAverageInsulin()
-            }
-        }
+    init {
+        observeNotes()
     }
 
     fun updateDate(newDate: String) {
@@ -44,12 +38,33 @@ class NoteViewModel(private val noteRepository: NoteRepository) : ViewModel() {
         observeNotes()
     }
 
+    private fun observeNotes() {
+        viewModelScope.launch {
+            noteRepository.selectNotesByDate(dateValue).collect {
+                notes.value = it
+                setDailyTasks()
+                setAverageGlucose()
+                setAverageFood()
+                setAverageInsulin()
+            }
+        }
+    }
+
+    private fun setDailyTasks() {
+        dailyTasks = notes.value.size
+    }
+
     private fun setAverageGlucose() {
         val list = notes.value
-        var sum = 0.0f
-        list.forEach { note -> sum += note.glucose.toFloat() }
-        if (sum != 0.0f) {
-            averageGlucose = DecimalFormat("#.#").format(sum / list.count()).toFloat()
+        var sum = 0.0
+        list.forEach { note -> sum += note.glucose }
+        if (sum != 0.0) {
+            val roundedNumber = (sum / (list.count { it.glucose != 0.0 }))
+                .toBigDecimal()
+                .setScale(1, RoundingMode.UP)
+                .toDouble()
+
+            averageGlucose = roundedNumber
         }
     }
 
@@ -57,7 +72,7 @@ class NoteViewModel(private val noteRepository: NoteRepository) : ViewModel() {
         val list = notes.value
         var sum = 0.0f
         list.forEach { note -> sum += note.food.toFloat() }
-        if (sum != 0.0f) averageFood = DecimalFormat("#.#").format(sum / list.count()).toFloat()
+        if (sum != 0.0f) averageFood = sum / list.count { it.food.toFloat() != 0.0f }
     }
 
     private fun setAverageInsulin() {
@@ -68,16 +83,14 @@ class NoteViewModel(private val noteRepository: NoteRepository) : ViewModel() {
                 sum += note.insulin.toFloat()
             }
         }
-        if (sum != 0.0f) averageInsulin = DecimalFormat("#.#").format(sum / list.count()).toFloat()
+        if (sum != 0.0f) averageInsulin = sum / list.count {
+            it.insulin.toFloat() != 0.0f && it.insulin_type == InsulinType.SHORT.toString()
+        }
     }
 
     private fun clearAverageValues() {
-        averageGlucose = 0.0f
+        averageGlucose = 0.0
         averageFood = 0.0f
         averageInsulin = 0.0f
-    }
-
-    init {
-        observeNotes()
     }
 }

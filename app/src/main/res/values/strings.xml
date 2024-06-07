@@ -20,4 +20,11 @@
     <string name="button_add_note">Add note</string>
     <string name="button_select">Select</string>
     <string name="button_cancel">Cancel</string>
+
+    <string name="daily_tasks">Daily tasks</string>
+    <string name="daily_task_1">add 4 notes</string>
+    <string name="daily_task_2">inject long-type insulin</string>
+
+    <string name="weekly_tasks">Weekly tasks</string>
+    <string name="weekly_task_1">keep daily records</string>
 </resources>

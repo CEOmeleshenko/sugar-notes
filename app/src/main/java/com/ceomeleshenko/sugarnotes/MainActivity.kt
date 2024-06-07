@@ -20,6 +20,7 @@ import com.ceomeleshenko.sugarnotes.presentation.ui.theme.SugarNotesTheme
 import org.koin.android.ext.android.getKoin
 import org.koin.compose.KoinContext
 import org.koin.core.context.KoinContext
+import kotlin.concurrent.thread
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

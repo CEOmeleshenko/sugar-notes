@@ -21,6 +21,7 @@ import com.ceomeleshenko.sugarnotes.presentation.ui.components.HorizontalNumberP
 import com.ceomeleshenko.sugarnotes.presentation.ui.theme.Typography
 import com.ceomeleshenko.sugarnotes.presentation.viewmodel.AddNoteViewModel
 import org.koin.androidx.compose.koinViewModel
+import java.math.RoundingMode
 
 @Composable
 fun GlucoseSection(viewModel: AddNoteViewModel = koinViewModel()) {
@@ -45,7 +46,7 @@ fun GlucoseSection(viewModel: AddNoteViewModel = koinViewModel()) {
                     horizontalArrangement = Arrangement.Center, modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
-                        text = viewModel.glucoseValue.toFloat()
+                        text = viewModel.glucoseValue
                             .toString() + " " + stringResource(R.string.unit_glucose),
                         fontWeight = FontWeight.Medium,
                         style = Typography.titleLarge
@@ -56,10 +57,17 @@ fun GlucoseSection(viewModel: AddNoteViewModel = koinViewModel()) {
                         maxNumber = 34.0,
                         selectedNumber = viewModel.glucoseValue,
                         modifier = Modifier
-                            .width(230.dp)
+                            .width(240.dp)
                             .padding(horizontal = 20.dp)
                     ) {
-                        viewModel.glucoseValue = DecimalFormat("#.#").format(it).toDouble()
+//                        val roundedNumber = it.toDouble()
+//                            .toBigDecimal()
+//                            .setScale(1, RoundingMode.UP)
+//                            .toDouble()
+
+                        val roundedNumber = it.toDouble()
+
+                        viewModel.glucoseValue = roundedNumber
                     }
                 }
             }

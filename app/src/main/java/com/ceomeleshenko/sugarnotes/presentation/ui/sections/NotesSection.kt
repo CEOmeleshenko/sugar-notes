@@ -3,8 +3,10 @@ package com.ceomeleshenko.sugarnotes.presentation.ui.sections
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,11 +19,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -29,15 +29,27 @@ import com.ceomeleshenko.sugarnotes.Note
 import com.ceomeleshenko.sugarnotes.R
 import com.ceomeleshenko.sugarnotes.data.models.InsulinType
 import com.ceomeleshenko.sugarnotes.presentation.ui.theme.Typography
-import com.ceomeleshenko.sugarnotes.presentation.viewmodel.NoteViewModel
+import com.ceomeleshenko.sugarnotes.presentation.viewmodel.NotesViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun NotesSection(viewModel: NoteViewModel = koinViewModel()) {
+fun NotesSection(
+    viewModel: NotesViewModel = koinViewModel(),
+    modifier: Modifier = Modifier
+) {
     val notes by viewModel.notes.collectAsState()
 
+    if (notes.isEmpty()) {
+        Box(modifier = Modifier.fillMaxSize()) {
+            Text(
+                modifier = Modifier.align(Alignment.TopCenter),
+                text = "Нет записей"
+            )
+        }
+    }
+
     LazyColumn(
-        modifier = Modifier.animateContentSize(),
+        modifier = modifier.animateContentSize(),
         verticalArrangement = Arrangement.spacedBy(12.dp),
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp)
     ) {
@@ -49,21 +61,33 @@ fun NotesSection(viewModel: NoteViewModel = koinViewModel()) {
 
 @Composable
 private fun NoteItem(
-    note: Note = Note(
-        id = 0,
-        glucose = 5.0,
-        insulin = 4,
-        insulin_type = InsulinType.SHORT.toString(),
-        food = 2,
-        date = "",
-        time = "10:00"
-    )
+    note: Note
 ) {
+
+//    val swipeThreshold = 100.dp TODO
+//    val swipePercentage = remember { mutableFloatStateOf(0f) }
+
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
             defaultElevation = 6.dp
         ),
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
+//            .pointerInput(Unit) {
+//                detectDragGestures(
+//                    onDragEnd = {
+//                        if (swipePercentage.floatValue > 0.5f) {
+//                            Log.d("TAG", "NoteItem: deleted")
+//                        }
+//                        swipePercentage.floatValue = 0f
+//                    },
+//                    onDrag = { change, dragAmount ->
+//                        change.consume()
+//                        val newSwipePercentage = dragAmount.x / swipeThreshold.value
+//                        swipePercentage.floatValue = newSwipePercentage.coerceIn(0f, 1f)
+//                    }
+//                )
+//            }
     ) {
         Row(
             modifier = Modifier

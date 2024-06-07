@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SugarNotes</string>
+
+    <string name="navbar_item_home">Главная</string>
+    <string name="navbar_item_statistic">Статистика</string>
+    <string name="navbar_item_add">Добавить запись</string>
+
+    <string name="unit_glucose">ммоль/л</string>
+    <string name="unit_food">ХЕ</string>
+    <string name="unit_insulin">ед.</string>
+    <string name="unit_no_data">н/д</string>
+
+    <string name="insulin_type_short">короткий</string>
+    <string name="insulin_type_long">длинный</string>
+
+    <string name="add_note_section_glucose">Сахар крови</string>
+    <string name="add_note_section_insulin">Инсулин</string>
+    <string name="add_note_section_food">Еда</string>
+
+    <string name="button_add_note">Добавить</string>
+    <string name="button_select">Выбрать</string>
+    <string name="button_cancel">Отмена</string>
+
+    <string name="daily_tasks">Задания дня</string>
+    <string name="daily_task_1">добавить 4 записи</string>
+    <string name="daily_task_2">ввести длинный инсулин</string>
+
+    <string name="weekly_tasks">Задания недели</string>
+    <string name="weekly_task_1">ежедневно вести записи</string>
+</resources>

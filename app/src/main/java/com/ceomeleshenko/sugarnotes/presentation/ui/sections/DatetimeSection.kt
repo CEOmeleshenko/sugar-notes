@@ -20,7 +20,9 @@ import com.ceomeleshenko.sugarnotes.presentation.viewmodel.AddNoteViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun DatetimeSection(viewModel: AddNoteViewModel = koinViewModel()) {
+fun DatetimeSection(
+    viewModel: AddNoteViewModel = koinViewModel()
+) {
     Row {
         ElevatedCard(
             elevation = CardDefaults.cardElevation(

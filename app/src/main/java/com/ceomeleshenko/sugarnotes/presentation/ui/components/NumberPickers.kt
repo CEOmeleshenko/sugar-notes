@@ -1,5 +1,6 @@
 package com.ceomeleshenko.sugarnotes.presentation.ui.components
 
+import android.util.Log
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.ceomeleshenko.sugarnotes.presentation.ui.theme.Typography
+import java.math.RoundingMode
 
 @Composable
 fun HorizontalNumberPicker(
@@ -32,19 +34,22 @@ fun HorizontalNumberPicker(
     val numbers = generateSequence(0.0) { it + 0.1 }
         .takeWhile { it <= maxNumber + 0.1 }
         .toList()
-        .map { it.toFloat() }
+        .map { it.toBigDecimal().setScale(1, RoundingMode.DOWN).toDouble() }
+        .distinct()
 
-    val selectedIndex = numbers.indexOf(selectedNumber.toFloat())
+    Log.d("TAG", "HorizontalNumberPicker: $numbers")
+
+    val selectedIndex = numbers.indexOf(selectedNumber)
 
     LazyRow(
         state = lazyListState,
         verticalAlignment = Alignment.Bottom,
-        modifier = modifier.height(40.dp)
+        modifier = modifier.height(50.dp)
     ) {
         items(numbers) { number ->
             NumberItem(
                 number = number,
-                isSelected = number == selectedNumber.toFloat(),
+                isSelected = number == selectedNumber,
                 onNumberSelected = onNumberSelected
             )
         }
@@ -100,7 +105,8 @@ private fun NumberItem(
         if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
     val fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
     val style = if (isSelected) Typography.titleMedium else Typography.titleSmall
-    val text = if (number is Double) number.toFloat().toString() else number.toString()
+//    val text = if (number is Double) number.toFloat().toString() else number.toString()
+    val text = number.toString()
     Text(
         color = textColor,
         fontWeight = fontWeight,
@@ -108,7 +114,7 @@ private fun NumberItem(
         text = text,
         modifier = modifier
             .clickable { onNumberSelected(number) }
-            .padding(horizontal = 4.dp, vertical = 2.dp)
+            .padding(horizontal = 4.dp, vertical = 4.dp)
             .wrapContentSize(Alignment.Center)
             .animateContentSize()
     )

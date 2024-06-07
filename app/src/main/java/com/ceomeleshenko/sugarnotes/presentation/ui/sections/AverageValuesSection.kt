@@ -17,27 +17,24 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ceomeleshenko.sugarnotes.R
 import com.ceomeleshenko.sugarnotes.presentation.ui.theme.Typography
-import com.ceomeleshenko.sugarnotes.presentation.viewmodel.NoteViewModel
+import com.ceomeleshenko.sugarnotes.presentation.viewmodel.NotesViewModel
 import org.koin.androidx.compose.koinViewModel
 
-@Preview(showSystemUi = true)
 @Composable
 fun AverageValuesSection(
-    viewModel: NoteViewModel = koinViewModel(),
+    viewModel: NotesViewModel = koinViewModel(),
     modifier: Modifier = Modifier
 ) {
     Box(
         modifier = modifier
-            .padding(16.dp)
             .wrapContentHeight()
             .fillMaxWidth()
             .height(120.dp)
             .clip(RoundedCornerShape(20.dp))
-            .background(MaterialTheme.colorScheme.secondaryContainer),
+            .background(MaterialTheme.colorScheme.primaryContainer),
         contentAlignment = Alignment.Center
     ) {
         Row(

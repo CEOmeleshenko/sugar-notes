@@ -1,5 +1,6 @@
 package com.ceomeleshenko.sugarnotes.data
 
+import android.util.Log
 import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
 import com.ceomeleshenko.sugarnotes.Database
@@ -7,6 +8,7 @@ import com.ceomeleshenko.sugarnotes.Note
 import com.ceomeleshenko.sugarnotes.data.models.InsulinType
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
 import java.time.LocalTime
@@ -15,6 +17,8 @@ interface NoteRepository {
     suspend fun selectNoteById(id: Long): Note?
 
     fun selectNotesByDate(date: String): Flow<List<Note>>
+
+    fun selectNotesByRange(startDate: String, endDate: String): Flow<List<Note>>
 
     suspend fun insertNote(
         glucose: Double = 0.0,
@@ -37,8 +41,14 @@ class NoteRepositoryImpl(database: Database) : NoteRepository {
         return queries.selectNoteById(id).executeAsOneOrNull()
     }
 
-    override fun selectNotesByDate(date: String): Flow<List<Note>> {
-        return queries.selectNotesByDate(date).asFlow().mapToList(Dispatchers.IO)
+    override fun selectNotesByRange(startDate: String, endDate: String): Flow<List<Note>> = flow {
+        val values = queries.selectNotesByRange(startDate, endDate).executeAsList()
+        emit(values)
+    }
+
+    override fun selectNotesByDate(date: String): Flow<List<Note>> = flow {
+        val values = queries.selectNotesByDate(date).executeAsList()
+        emit(values)
     }
 
     override suspend fun insertNote(

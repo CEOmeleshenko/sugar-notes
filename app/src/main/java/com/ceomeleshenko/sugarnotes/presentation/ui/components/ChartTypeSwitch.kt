@@ -6,8 +6,11 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -20,19 +23,21 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.ceomeleshenko.sugarnotes.R
+import com.ceomeleshenko.sugarnotes.data.models.ChartType
 import com.ceomeleshenko.sugarnotes.data.models.InsulinType
 import com.ceomeleshenko.sugarnotes.presentation.ui.theme.Typography
 
 @Composable
-fun InsulinTypeSwitch(
-    selectedType: InsulinType,
+fun ChartTypeSwitch(
+    selectedType: ChartType,
     modifier: Modifier = Modifier,
-    onInsulinTypeSwitch: (InsulinType) -> Unit
+    onChartTypeSwitch: (ChartType) -> Unit
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
-            .width(180.dp)
+            .wrapContentWidth()
+            .height(40.dp)
             .clip(RoundedCornerShape(8.dp))
             .padding(horizontal = 8.dp, vertical = 8.dp)
             .background(MaterialTheme.colorScheme.surfaceColorAtElevation(6.dp))
@@ -44,23 +49,28 @@ fun InsulinTypeSwitch(
     ) {
 
         SwitchItem(
-            insulinType = InsulinType.SHORT,
-            isSelected = selectedType == InsulinType.SHORT,
-            onInsulinTypeSwitch = onInsulinTypeSwitch
+            chartType = ChartType.DAILY,
+            isSelected = selectedType == ChartType.DAILY,
+            onChartTypeSwitch = onChartTypeSwitch
         )
         SwitchItem(
-            insulinType = InsulinType.LONG,
-            isSelected = selectedType == InsulinType.LONG,
-            onInsulinTypeSwitch = onInsulinTypeSwitch
+            chartType = ChartType.WEEKLY,
+            isSelected = selectedType == ChartType.WEEKLY,
+            onChartTypeSwitch = onChartTypeSwitch
+        )
+        SwitchItem(
+            chartType = ChartType.MONTHLY,
+            isSelected = selectedType == ChartType.MONTHLY,
+            onChartTypeSwitch = onChartTypeSwitch
         )
     }
 }
 
 @Composable
 private fun SwitchItem(
-    insulinType: InsulinType,
+    chartType: ChartType,
     isSelected: Boolean,
-    onInsulinTypeSwitch: (InsulinType) -> Unit,
+    onChartTypeSwitch: (ChartType) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val backgroundColor by animateColorAsState(
@@ -72,17 +82,18 @@ private fun SwitchItem(
     )
 
     Box(modifier = Modifier
-        .width(90.dp)
+        .wrapContentWidth()
         .clip(RoundedCornerShape(8.dp))
         .background(backgroundColor)
-        .padding(vertical = 4.dp)
+        .padding(horizontal = 8.dp, vertical = 4.dp)
         .clickable {
-            onInsulinTypeSwitch(insulinType)
+            onChartTypeSwitch(chartType)
         }) {
         Text(
-            text = when (insulinType) {
-                InsulinType.SHORT -> stringResource(R.string.insulin_type_short)
-                InsulinType.LONG -> stringResource(R.string.insulin_type_long)
+            text = when (chartType) {
+                ChartType.DAILY -> "день"
+                ChartType.WEEKLY -> "неделя"
+                ChartType.MONTHLY -> "месяц"
             },
             style = Typography.bodyLarge,
             modifier = modifier

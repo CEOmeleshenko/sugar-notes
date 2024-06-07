@@ -88,4 +88,10 @@ dependencies {
     implementation("app.cash.sqldelight:android-driver:2.0.2")
     implementation("app.cash.sqldelight:coroutines-extensions:2.0.2")
 
+    // For Jetpack Compose.
+    implementation("com.patrykandpatrick.vico:compose:2.0.0-alpha.20")
+    // For `compose`. Creates a `ChartStyle` based on an M3 Material Theme.
+    implementation("com.patrykandpatrick.vico:compose-m3:2.0.0-alpha.20")
+    // Houses the core logic for charts and other elements. Included in all other modules.
+//    implementation("com.patrykandpatrick.vico:core:2.0.0-alpha.20")
 }

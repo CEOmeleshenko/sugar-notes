@@ -18,6 +18,10 @@ SELECT * FROM Note WHERE id = ?;
 selectNotesByDate:
 SELECT * FROM Note WHERE date = ? ORDER BY time;
 
+selectNotesByRange:
+SELECT * FROM Note
+WHERE date BETWEEN date(:startDate) AND date(:endDate) ORDER BY time;
+
 updateNote:
 UPDATE Note
 SET glucose = ?, food = ?, insulin = ?, insulin_type = ?, date = ?, time = ?
