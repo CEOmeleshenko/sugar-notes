@@ -63,7 +63,6 @@ class NotesViewModel(private val noteRepository: NoteRepository) : ViewModel() {
                 .toBigDecimal()
                 .setScale(1, RoundingMode.UP)
                 .toDouble()
-
             averageGlucose = roundedNumber
         }
     }
