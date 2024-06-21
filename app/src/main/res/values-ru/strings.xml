@@ -5,6 +5,14 @@
     <string name="navbar_item_statistic">Статистика</string>
     <string name="navbar_item_add">Добавить запись</string>
 
+    <string name="onboarding_title_1">Sugar Notes</string>
+    <string name="onboarding_title_2">Анализируйте</string>
+    <string name="onboarding_title_3">Не забывайте</string>
+
+    <string name="onboarding_text_1">Добро пожаловать в дневник самоконтроля при сахарном диабете</string>
+    <string name="onboarding_text_2">Выберите день в календаре, добавляйте записи и получайте статистику</string>
+    <string name="onboarding_text_3">Следить за своим здоровьем - легко! Регулярно делайте записи и выполняйте задания</string>
+
     <string name="unit_glucose">ммоль/л</string>
     <string name="unit_food">ХЕ</string>
     <string name="unit_insulin">ед.</string>
@@ -20,6 +28,7 @@
     <string name="button_add_note">Добавить</string>
     <string name="button_select">Выбрать</string>
     <string name="button_cancel">Отмена</string>
+    <string name="button_finish">Финиш</string>
 
     <string name="daily_tasks">Задания дня</string>
     <string name="daily_task_1">добавить 4 записи</string>

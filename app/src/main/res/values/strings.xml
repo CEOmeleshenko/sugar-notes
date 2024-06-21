@@ -5,6 +5,14 @@
     <string name="navbar_item_statistic">Statistic</string>
     <string name="navbar_item_add">Add Note</string>
 
+    <string name="onboarding_title_1">Sugar Notes</string>
+    <string name="onboarding_title_2">Analyze</string>
+    <string name="onboarding_title_3">Don\'t forget</string>
+
+    <string name="onboarding_text_1">Welcome to the diary of self-control in diabetes mellitus</string>
+    <string name="onboarding_text_2">Select a day in the calendar, add entries and get statistics</string>
+    <string name="onboarding_text_3">It\'s easy to keep track of your health! Take notes regularly and complete tasks</string>
+
     <string name="unit_glucose">mmol/l</string>
     <string name="unit_food">bread unit</string>
     <string name="unit_insulin">unit</string>
@@ -20,6 +28,7 @@
     <string name="button_add_note">Add note</string>
     <string name="button_select">Select</string>
     <string name="button_cancel">Cancel</string>
+    <string name="button_finish">Finish</string>
 
     <string name="daily_tasks">Daily tasks</string>
     <string name="daily_task_1">add 4 notes</string>

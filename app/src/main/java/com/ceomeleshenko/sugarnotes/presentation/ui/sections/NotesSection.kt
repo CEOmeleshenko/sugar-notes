@@ -63,31 +63,11 @@ fun NotesSection(
 private fun NoteItem(
     note: Note
 ) {
-
-//    val swipeThreshold = 100.dp TODO
-//    val swipePercentage = remember { mutableFloatStateOf(0f) }
-
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
             defaultElevation = 6.dp
         ),
-        modifier = Modifier
-            .fillMaxWidth()
-//            .pointerInput(Unit) {
-//                detectDragGestures(
-//                    onDragEnd = {
-//                        if (swipePercentage.floatValue > 0.5f) {
-//                            Log.d("TAG", "NoteItem: deleted")
-//                        }
-//                        swipePercentage.floatValue = 0f
-//                    },
-//                    onDrag = { change, dragAmount ->
-//                        change.consume()
-//                        val newSwipePercentage = dragAmount.x / swipeThreshold.value
-//                        swipePercentage.floatValue = newSwipePercentage.coerceIn(0f, 1f)
-//                    }
-//                )
-//            }
+        modifier = Modifier.fillMaxWidth()
     ) {
         Row(
             modifier = Modifier

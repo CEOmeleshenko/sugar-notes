@@ -47,7 +47,6 @@ fun ChartSection(
     viewModel: StatisticViewModel = koinViewModel(),
     modifier: Modifier = Modifier
 ) {
-    val notes by viewModel.notes.collectAsState()
     val values by viewModel.chartValues.collectAsState()
     val startAxisValues by viewModel.chartAxis.collectAsState()
 
