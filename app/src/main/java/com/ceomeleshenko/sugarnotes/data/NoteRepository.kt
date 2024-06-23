@@ -1,8 +1,5 @@
 package com.ceomeleshenko.sugarnotes.data
 
-import android.util.Log
-import app.cash.sqldelight.coroutines.asFlow
-import app.cash.sqldelight.coroutines.mapToList
 import com.ceomeleshenko.sugarnotes.Database
 import com.ceomeleshenko.sugarnotes.Note
 import com.ceomeleshenko.sugarnotes.data.models.InsulinType

@@ -56,7 +56,6 @@ fun WelcomeScreen(
                 contentDescription = "App Icon",
                 modifier = Modifier
                     .size(128.dp)
-//                    .padding(bottom = 8.dp),
             )
             Text(
                 text = stringResource(R.string.app_name),

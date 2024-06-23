@@ -9,50 +9,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="Множество изменений и исправлений">
-      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/NotesTable.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/OnboardingScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/ReportScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/WelcomeScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/viewmodel/ReportViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/onboarding_healthcare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/onboarding_monitor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/onboarding_report.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/di/AppModules.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/di/AppModules.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/BottomNavigationBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/BottomNavigationBar.kt" afterDir="false" />
+    <list default="true" id="6303af69-4658-4b27-a50c-c7ac7dcba157" name="Changes" comment="Изменения и исправления">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/SugarNotesApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/SugarNotesApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/NoteRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/UpdateCheckWorker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/data/UpdateCheckWorker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/ChartTypeSwitch.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/ChartTypeSwitch.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/NotesTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/NotesTable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/NumberPickers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/components/NumberPickers.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/AddNoteScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/AddNoteScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/HomeScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/StatisticScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/StatisticScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/sections/ChartSection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/sections/ChartSection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/OnboardingScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/OnboardingScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/ReportScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/screens/ReportScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/sections/GlucoseSection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/sections/GlucoseSection.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/sections/NotesSection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ceomeleshenko/sugarnotes/presentation/ui/sections/NotesSection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +31,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Andrey\.android\avd\Pixel_3a_API_34_extension_level_7_x86_64.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Andrey\.android\avd\Pixel_2_API_28.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -115,8 +84,9 @@
         <option value="Class" />
         <option value="valueResourceFile" />
         <option value="Kotlin Enum" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="SqlDelight File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -136,7 +106,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -148,34 +118,42 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
-    &quot;PROJECT_TRUSTED_KEY&quot;: &quot;true&quot;,
-    &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;DRAWABLE&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Andrey/Code/sugar-notes/app/src/main/res/drawable&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Suggestions&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.google.gct.login2.settings.GoogleLoginApplicationSettingsConfigurableProvider&quot;,
-    &quot;stored_options&quot;: &quot;{\&quot;dialectConnections\&quot;:{\&quot;app.cash.sqldelight.dialects.sqlite_3_18.SqliteDialect\&quot;:{\&quot;orderedOptions\&quot;:[],\&quot;serializedProperties\&quot;:{}}}}&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "Compose Preview.NotesTablePreview.executor": "Run",
+    "PROJECT_TRUSTED_KEY": "true",
+    "ResourceManagerPrefKey.ResourceType": "DRAWABLE",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ScreenRecorder.SavePath": "C:\\Users\\Andrey\\Desktop",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.android.tools.idea.streaming.zoom.toolbar.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Andrey/Desktop",
+    "project.structure.last.edited": "Suggestions",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "com.google.gct.login2.settings.GoogleLoginApplicationSettingsConfigurableProvider",
+    "stored_options": "{\"dialectConnections\":{\"app.cash.sqldelight.dialects.sqlite_3_18.SqliteDialect\":{\"orderedOptions\":[],\"serializedProperties\":{}}}}"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;C:\\Users\\Andrey\\.gradle&quot;
+  "keyToStringList": {
+    "com.android.tools.idea.sqlite.queryhistory": [
+      "INSERT INTO Note (glucose, food, insulin, insulin_type, date, time) VALUES\n(5.4, 2, 4, \"SHORT\", \"2024-06-01\", \"08:00\"),\n(13.2, 3, 5, \"SHORT\", \"2024-06-01\", \"12:00\"),\n(7.1, 4, 6, \"SHORT\", \"2024-06-01\", \"15:00\"),\n(6.8, 2, 5, \"SHORT\", \"2024-06-01\", \"18:00\"),\n(5.9, 0, 20, \"LONG\", \"2024-06-01\", \"21:00\"),\n\n(2.8, 2, 4, \"SHORT\", \"2024-06-02\", \"08:00\"),\n(6.4, 3, 5, \"SHORT\", \"2024-06-02\", \"12:00\"),\n(7.3, 4, 6, \"SHORT\", \"2024-06-02\", \"15:00\"),\n(6.9, 2, 5, \"SHORT\", \"2024-06-02\", \"18:00\"),\n(6.0, 0, 20, \"LONG\", \"2024-06-02\", \"21:00\"),\n\n(3.5, 2, 4, \"SHORT\", \"2024-06-03\", \"08:00\"),\n(6.5, 3, 5, \"SHORT\", \"2024-06-03\", \"12:00\"),\n(7.2, 4, 6, \"SHORT\", \"2024-06-03\", \"15:00\"),\n(15.0, 2, 5, \"SHORT\", \"2024-06-03\", \"18:00\"),\n(6.1, 0, 20, \"LONG\", \"2024-06-03\", \"21:00\"),\n\n(5.7, 2, 4, \"SHORT\", \"2024-06-04\", \"08:00\"),\n(3.2, 3, 5, \"SHORT\", \"2024-06-04\", \"12:00\"),\n(7.4, 4, 6, \"SHORT\", \"2024-06-04\", \"15:00\"),\n(7.1, 2, 5, \"SHORT\", \"2024-06-04\", \"18:00\"),\n(6.2, 0, 20, \"LONG\", \"2024-06-04\", \"21:00\"),\n\n(5.8, 2, 4, \"SHORT\", \"2024-06-05\", \"08:00\"),\n(6.7, 3, 5, \"SHORT\", \"2024-06-05\", \"12:00\"),\n(14.5, 4, 6, \"SHORT\", \"2024-06-05\", \"15:00\"),\n(7.2, 2, 5, \"SHORT\", \"2024-06-05\", \"18:00\"),\n(6.3, 0, 20, \"LONG\", \"2024-06-05\", \"21:00\"),\n\n(5.9, 2, 4, \"SHORT\", \"2024-06-06\", \"08:00\"),\n(6.8, 3, 5, \"SHORT\", \"2024-06-06\", \"12:00\"),\n(3.8, 4, 6, \"SHORT\", \"2024-06-06\", \"15:00\"),\n(7.3, 2, 5, \"SHORT\", \"2024-06-06\", \"18:00\"),\n(6.4, 0, 20, \"LONG\", \"2024-06-06\", \"21:00\"),\n\n(6.0, 2, 4, \"SHORT\", \"2024-06-07\", \"08:00\"),\n(16.9, 3, 5, \"SHORT\", \"2024-06-07\", \"12:00\"),\n(7.7, 4, 6, \"SHORT\", \"2024-06-07\", \"15:00\"),\n(7.4, 2, 5, \"SHORT\", \"2024-06-07\", \"18:00\"),\n(6.5, 0, 20, \"LONG\", \"2024-06-07\", \"21:00\"),\n\n(6.1, 2, 4, \"SHORT\", \"2024-06-08\", \"08:00\"),\n(7.0, 3, 5, \"SHORT\", \"2024-06-08\", \"12:00\"),\n(2.7, 4, 6, \"SHORT\", \"2024-06-08\", \"15:00\"),\n(7.5, 2, 5, \"SHORT\", \"2024-06-08\", \"18:00\"),\n(6.6, 0, 20, \"LONG\", \"2024-06-08\", \"21:00\"),\n\n(6.2, 2, 4, \"SHORT\", \"2024-06-09\", \"08:00\"),\n(7.1, 3, 5, \"SHORT\", \"2024-06-09\", \"12:00\"),\n(7.9, 4, 6, \"SHORT\", \"2024-06-09\", \"15:00\"),\n(3.1, 2, 5, \"SHORT\", \"2024-06-09\", \"18:00\"),\n(6.7, 0, 20, \"LONG\", \"2024-06-09\", \"21:00\"),\n\n(6.3, 2, 4, \"SHORT\", \"2024-06-10\", \"08:00\"),\n(7.2, 3, 5, \"SHORT\", \"2024-06-10\", \"12:00\"),\n(18.0, 4, 6, \"SHORT\", \"2024-06-10\", \"15:00\"),\n(7.7, 2, 5, \"SHORT\", \"2024-06-10\", \"18:00\"),\n(6.8, 0, 20, \"LONG\", \"2024-06-10\", \"21:00\");",
+      "INSERT INTO Note (glucose, food, insulin, insulin_type, date, time) VALUES\n(5.4, 2, 4, \"SHORT\", \"2024-06-01\", \"08:00\"),\n(6.2, 3, 5, \"SHORT\", \"2024-06-01\", \"12:00\"),\n(7.1, 4, 6, \"SHORT\", \"2024-06-01\", \"15:00\"),\n(6.8, 2, 5, \"SHORT\", \"2024-06-01\", \"18:00\"),\n(5.9, 0, 20, \"LONG\", \"2024-06-01\", \"21:00\"),\n\n(5.6, 2, 4, \"SHORT\", \"2024-06-02\", \"08:00\"),\n(6.4, 3, 5, \"SHORT\", \"2024-06-02\", \"12:00\"),\n(7.3, 4, 6, \"SHORT\", \"2024-06-02\", \"15:00\"),\n(6.9, 2, 5, \"SHORT\", \"2024-06-02\", \"18:00\"),\n(6.0, 0, 20, \"LONG\", \"2024-06-02\", \"21:00\"),\n\n(5.5, 2, 4, \"SHORT\", \"2024-06-03\", \"08:00\"),\n(6.5, 3, 5, \"SHORT\", \"2024-06-03\", \"12:00\"),\n(7.2, 4, 6, \"SHORT\", \"2024-06-03\", \"15:00\"),\n(7.0, 2, 5, \"SHORT\", \"2024-06-03\", \"18:00\"),\n(6.1, 0, 20, \"LONG\", \"2024-06-03\", \"21:00\"),\n\n(5.7, 2, 4, \"SHORT\", \"2024-06-04\", \"08:00\"),\n(6.6, 3, 5, \"SHORT\", \"2024-06-04\", \"12:00\"),\n(7.4, 4, 6, \"SHORT\", \"2024-06-04\", \"15:00\"),\n(7.1, 2, 5, \"SHORT\", \"2024-06-04\", \"18:00\"),\n(6.2, 0, 20, \"LONG\", \"2024-06-04\", \"21:00\"),\n\n(5.8, 2, 4, \"SHORT\", \"2024-06-05\", \"08:00\"),\n(6.7, 3, 5, \"SHORT\", \"2024-06-05\", \"12:00\"),\n(7.5, 4, 6, \"SHORT\", \"2024-06-05\", \"15:00\"),\n(7.2, 2, 5, \"SHORT\", \"2024-06-05\", \"18:00\"),\n(6.3, 0, 20, \"LONG\", \"2024-06-05\", \"21:00\"),\n\n(5.9, 2, 4, \"SHORT\", \"2024-06-06\", \"08:00\"),\n(6.8, 3, 5, \"SHORT\", \"2024-06-06\", \"12:00\"),\n(7.6, 4, 6, \"SHORT\", \"2024-06-06\", \"15:00\"),\n(7.3, 2, 5, \"SHORT\", \"2024-06-06\", \"18:00\"),\n(6.4, 0, 20, \"LONG\", \"2024-06-06\", \"21:00\"),\n\n(6.0, 2, 4, \"SHORT\", \"2024-06-07\", \"08:00\"),\n(6.9, 3, 5, \"SHORT\", \"2024-06-07\", \"12:00\"),\n(7.7, 4, 6, \"SHORT\", \"2024-06-07\", \"15:00\"),\n(7.4, 2, 5, \"SHORT\", \"2024-06-07\", \"18:00\"),\n(6.5, 0, 20, \"LONG\", \"2024-06-07\", \"21:00\"),\n\n(6.1, 2, 4, \"SHORT\", \"2024-06-08\", \"08:00\"),\n(7.0, 3, 5, \"SHORT\", \"2024-06-08\", \"12:00\"),\n(7.8, 4, 6, \"SHORT\", \"2024-06-08\", \"15:00\"),\n(7.5, 2, 5, \"SHORT\", \"2024-06-08\", \"18:00\"),\n(6.6, 0, 20, \"LONG\", \"2024-06-08\", \"21:00\"),\n\n(6.2, 2, 4, \"SHORT\", \"2024-06-09\", \"08:00\"),\n(7.1, 3, 5, \"SHORT\", \"2024-06-09\", \"12:00\"),\n(7.9, 4, 6, \"SHORT\", \"2024-06-09\", \"15:00\"),\n(7.6, 2, 5, \"SHORT\", \"2024-06-09\", \"18:00\"),\n(6.7, 0, 20, \"LONG\", \"2024-06-09\", \"21:00\"),\n\n(6.3, 2, 4, \"SHORT\", \"2024-06-10\", \"08:00\"),\n(7.2, 3, 5, \"SHORT\", \"2024-06-10\", \"12:00\"),\n(8.0, 4, 6, \"SHORT\", \"2024-06-10\", \"15:00\"),\n(7.7, 2, 5, \"SHORT\", \"2024-06-10\", \"18:00\"),\n(6.8, 0, 20, \"LONG\", \"2024-06-10\", \"21:00\");",
+      "INSERT INTO Note (glucose, food, insulin, insulin_type, date, time)\nVALUES (5.4, 2, 4, \"SHORT\", \"2024-06-22\", \"12:00\");"
+    ],
+    "kotlin-gradle-user-dirs": [
+      "C:\\Users\\Andrey\\.gradle"
     ]
   }
-}</component>
+}]]></component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Default Config" />
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
@@ -192,6 +170,7 @@
       <recent name="C:\Users\Andrey\Code\sugar-notes\app\src\main\sqldelight\com\ceomeleshenko\sugarnotes" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.ceomeleshenko.sugarnotes.data" />
       <recent name="com.ceomeleshenko.sugarnotes.domain.models" />
       <recent name="com.ceomeleshenko.sugarnotes" />
       <recent name="com.ceomeleshenko.sugarnotes.presentation" />
@@ -352,7 +331,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717802961528</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Множество изменений и исправлений">
+      <option name="closed" value="true" />
+      <created>1718957067228</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718957067228</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Изменения и исправления">
+      <option name="closed" value="true" />
+      <created>1719141194754</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719141194754</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,7 +370,8 @@
     <MESSAGE value="Изменена структура в ui, добавлены элементы выбора даты и времени" />
     <MESSAGE value="Добавлены секции календаря и средних значений, прочие изменения" />
     <MESSAGE value="Множество изменений и исправлений" />
-    <option name="LAST_COMMIT_MESSAGE" value="Множество изменений и исправлений" />
+    <MESSAGE value="Изменения и исправления" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменения и исправления" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

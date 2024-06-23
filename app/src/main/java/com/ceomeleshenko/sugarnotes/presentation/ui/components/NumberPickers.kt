@@ -3,7 +3,6 @@ package com.ceomeleshenko.sugarnotes.presentation.ui.components
 import android.util.Log
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize

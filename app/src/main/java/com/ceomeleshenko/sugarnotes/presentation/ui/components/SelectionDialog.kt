@@ -57,7 +57,10 @@ fun TimeSelectionDialog(
                 .clip(RoundedCornerShape(10.dp))
                 .background(MaterialTheme.colorScheme.surface)
         ) {
-            Column(modifier = Modifier.padding(16.dp)) {
+            Column(
+                modifier = Modifier.padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 Row(
                     verticalAlignment = Alignment.Bottom,
                     horizontalArrangement = Arrangement.Center,
@@ -75,7 +78,8 @@ fun TimeSelectionDialog(
                                 selectedHour = it
                             }
                         },
-                        modifier = Modifier.width(60.dp)
+                        modifier = Modifier.width(60.dp),
+                        textStyle = MaterialTheme.typography.titleMedium,
                     )
 
                     Text(text = ":", fontWeight = FontWeight.Bold, style = Typography.displayMedium)
@@ -93,15 +97,18 @@ fun TimeSelectionDialog(
                                 selectedMinute = it
                             }
                         },
-                        modifier = Modifier.width(60.dp)
+                        modifier = Modifier.width(60.dp),
+                        textStyle = MaterialTheme.typography.titleMedium
                     )
 
                 }
 
-                Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
+                Row(
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+                ) {
                     OutlinedButton(
                         onClick = onDismissRequest,
-                        modifier = Modifier
                     ) {
                         Text(stringResource(R.string.button_cancel))
                     }

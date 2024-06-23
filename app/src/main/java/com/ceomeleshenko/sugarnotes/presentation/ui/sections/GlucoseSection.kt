@@ -1,6 +1,5 @@
 package com.ceomeleshenko.sugarnotes.presentation.ui.sections
 
-import android.icu.text.DecimalFormat
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,7 +20,6 @@ import com.ceomeleshenko.sugarnotes.presentation.ui.components.HorizontalNumberP
 import com.ceomeleshenko.sugarnotes.presentation.ui.theme.Typography
 import com.ceomeleshenko.sugarnotes.presentation.viewmodel.AddNoteViewModel
 import org.koin.androidx.compose.koinViewModel
-import java.math.RoundingMode
 
 @Composable
 fun GlucoseSection(viewModel: AddNoteViewModel = koinViewModel()) {

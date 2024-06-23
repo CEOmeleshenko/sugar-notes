@@ -32,6 +32,13 @@ class NotesViewModel(private val noteRepository: NoteRepository) : ViewModel() {
         observeNotes()
     }
 
+    fun deleteNote(noteId: Long) {
+        viewModelScope.launch {
+            noteRepository.deleteNote(noteId)
+            observeNotes()
+        }
+    }
+
     fun updateDate(newDate: String) {
         dateValue = newDate
         clearAverageValues()
@@ -71,7 +78,13 @@ class NotesViewModel(private val noteRepository: NoteRepository) : ViewModel() {
         val list = notes.value
         var sum = 0.0f
         list.forEach { note -> sum += note.food.toFloat() }
-        if (sum != 0.0f) averageFood = sum / list.count { it.food.toFloat() != 0.0f }
+        if (sum != 0.0f) {
+            val roundedNumber = (sum / (list.count { it.food.toFloat() != 0.0f }))
+                .toBigDecimal()
+                .setScale(1, RoundingMode.UP)
+                .toFloat()
+            averageFood = roundedNumber
+        }
     }
 
     private fun setAverageInsulin() {
@@ -82,8 +95,14 @@ class NotesViewModel(private val noteRepository: NoteRepository) : ViewModel() {
                 sum += note.insulin.toFloat()
             }
         }
-        if (sum != 0.0f) averageInsulin = sum / list.count {
-            it.insulin.toFloat() != 0.0f && it.insulin_type == InsulinType.SHORT.toString()
+        if (sum != 0.0f) {
+            val roundedNumber = (sum / (list.count {
+                it.insulin.toFloat() != 0.0f && it.insulin_type == InsulinType.SHORT.toString()
+            }))
+                .toBigDecimal()
+                .setScale(1, RoundingMode.UP)
+                .toFloat()
+            averageInsulin = roundedNumber
         }
     }
 

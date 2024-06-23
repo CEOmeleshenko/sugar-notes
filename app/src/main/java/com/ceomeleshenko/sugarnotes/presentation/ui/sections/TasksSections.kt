@@ -48,7 +48,10 @@ fun DailyTasksSection(
         Column(
             modifier = Modifier.padding(8.dp)
         ) {
-            Text(text = stringResource(R.string.daily_tasks))
+            Text(
+                text = stringResource(R.string.daily_tasks),
+                style = MaterialTheme.typography.titleMedium
+            )
             Text(
                 text = "› ${stringResource(R.string.daily_task_1)}: $dailyTasks/4",
                 textDecoration = if (dailyTasks >= 4) TextDecoration.LineThrough
@@ -86,7 +89,10 @@ fun WeeklyTasksSection(
         Column(
             modifier = Modifier.padding(8.dp)
         ) {
-            Text(text = stringResource(R.string.weekly_tasks))
+            Text(
+                text = stringResource(R.string.weekly_tasks),
+                style = MaterialTheme.typography.titleMedium
+            )
             Text(
                 text = "› ${stringResource(R.string.weekly_task_1)}: $weeklyTasks/7",
                 style =

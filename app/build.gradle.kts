@@ -89,5 +89,5 @@ dependencies {
     implementation("com.patrykandpatrick.vico:compose:2.0.0-alpha.20")
     implementation("com.patrykandpatrick.vico:compose-m3:2.0.0-alpha.20")
 
-    implementation("dev.shreyaspatil:capturable:2.1.0")
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
 }

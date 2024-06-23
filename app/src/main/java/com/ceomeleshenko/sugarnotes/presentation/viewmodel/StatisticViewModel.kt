@@ -22,7 +22,7 @@ import java.util.Locale
 class StatisticViewModel(private val noteRepository: NoteRepository) : ViewModel() {
 
     private val _notes = MutableStateFlow<List<Note>>(emptyList())
-    val notes: StateFlow<List<Note>> get() = _notes
+    private val notes: StateFlow<List<Note>> get() = _notes
 
     var chartType by mutableStateOf(ChartType.WEEKLY)
     val chartValues = MutableStateFlow<List<Float>>(emptyList())

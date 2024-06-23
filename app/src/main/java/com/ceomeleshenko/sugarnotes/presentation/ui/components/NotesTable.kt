@@ -1,33 +1,102 @@
 package com.ceomeleshenko.sugarnotes.presentation.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.ceomeleshenko.sugarnotes.presentation.ui.theme.Typography
+import java.time.LocalDate
+import java.time.format.TextStyle
+import java.util.Locale
 
 @Composable
-fun NotesTable(records: List<Record>) {
-    val groupedRecords = records.groupBy { it.day }
-//    val scrollState = rememberScrollState()
+fun NotesTable(reportRecords: List<ReportRecord>) {
+    val groupedRecords = reportRecords.groupBy { it.day }.toList().chunked(4)
 
     Column(
         modifier = Modifier
-            .fillMaxWidth()
-//            .verticalScroll(scrollState)
+            .clip(RoundedCornerShape(20.dp))
+            .background(Color.LightGray.copy(alpha = 0.1f))
     ) {
-        groupedRecords.forEach { (day, dayRecords) ->
-            DayHeader(day = day)
-            dayRecords.forEach { 
-                RecordRow(record = it)
+        groupedRecords.forEach { dayGroup ->
+            Row(
+                modifier = Modifier
+                    .wrapContentWidth()
+                    .padding(bottom = 8.dp)
+            ) {
+                dayGroup.forEach { (day, dayRecords) ->
+
+                    val longInsulinValue = dayRecords.find { it.longInsulin != 0 }?.longInsulin ?: 0
+
+                    Column(
+                        modifier = Modifier.padding(horizontal = 4.dp)
+                    ) {
+                        DayHeader(day = day)
+                        Row(Modifier.width(220.dp)) {
+                            Text(
+                                text = "время",
+                                modifier = Modifier.width(60.dp),
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                            Text(
+                                text = "сахар",
+                                modifier = Modifier.weight(0.4f),
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                            Text(
+                                text = "инсулин",
+                                modifier = Modifier.weight(0.4f),
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                            Text(
+                                text = "еда",
+                                modifier = Modifier.weight(0.4f),
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                        }
+                        dayRecords.forEach { record ->
+                            RecordRow(reportRecord = record)
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text(
+                                text = "длинный инсулин: $longInsulinValue ед.",
+                                style = MaterialTheme.typography.bodyMedium
+                            )
+                        }
+                    }
+                }
+                repeat(4 - dayGroup.size) {
+                    Spacer(modifier = Modifier.weight(1f))
+                }
+            }
+        }
+        Column {
+            Row {
+                Box(modifier = Modifier.background(Color(0xFFE0F7FA)).size(20.dp))
+                Text(text = " - гипогликемия (уровень сахара < 4.0) ")
+            }
+            Row {
+                Box(modifier = Modifier.background(Color(0xFFE8F5E9)).size(20.dp))
+                Text(text = " - нормальный уровень сахара")
+            }
+            Row {
+                Box(modifier = Modifier.background(Color(0xFFFFEBEE)).size(20.dp))
+                Text(text = " - гипергликемия (уровень сахара > 12.0) ")
             }
         }
     }
@@ -35,9 +104,15 @@ fun NotesTable(records: List<Record>) {
 
 @Composable
 private fun DayHeader(day: String) {
+    val date = LocalDate.parse(day)
+    val text = date.dayOfMonth.toString() + " " + date.month.getDisplayName(
+        TextStyle.FULL,
+        Locale.getDefault()
+    )
+
     Text(
-        text = day,
-        style = Typography.titleMedium,
+        text = text,
+        style = MaterialTheme.typography.titleMedium,
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 8.dp)
@@ -45,46 +120,47 @@ private fun DayHeader(day: String) {
 }
 
 @Composable
-private fun RecordRow(record: Record) {
+private fun RecordRow(reportRecord: ReportRecord) {
     val backgroundColor = when {
-        record.glucoseLevel < 4.0 -> Color(0xFFE0F7FA)
-        record.glucoseLevel > 12.0 -> Color(0xFFFFEBEE)
+        reportRecord.glucose < 4.0 -> Color(0xFFE0F7FA)
+        reportRecord.glucose > 12.0 -> Color(0xFFFFEBEE)
         else -> Color(0xFFE8F5E9)
     }
 
     Row(
         modifier = Modifier
-            .fillMaxWidth()
+            .width(220.dp)
             .background(backgroundColor)
             .padding(4.dp)
     ) {
         Text(
-            text = record.time,
-            modifier = Modifier.weight(1f),
-            style = Typography.bodyMedium
+            text = reportRecord.time,
+            modifier = Modifier.width(60.dp),
+            style = MaterialTheme.typography.bodyLarge
         )
         Text(
-            text = record.glucoseLevel.toString(),
-            modifier = Modifier.weight(1f),
-            style = Typography.bodyMedium
+            text = reportRecord.glucose.toString(),
+            modifier = Modifier.weight(0.4f),
+            style = MaterialTheme.typography.bodyLarge
         )
         Text(
-            text = record.insulinAmount.toString(),
-            modifier = Modifier.weight(1f),
-            style = Typography.bodyMedium
+            text = reportRecord.shortInsulin.toString(),
+            modifier = Modifier.weight(0.4f),
+            style = MaterialTheme.typography.bodyLarge
         )
         Text(
-            text = record.foodAmount.toString(),
-            modifier = Modifier.weight(1f),
-            style = Typography.bodyMedium
+            text = reportRecord.food.toString(),
+            modifier = Modifier.weight(0.4f),
+            style = MaterialTheme.typography.bodyLarge
         )
     }
 }
 
-data class Record(
+data class ReportRecord(
     val day: String,
     val time: String,
-    val glucoseLevel: Float,
-    val insulinAmount: Int,
-    val foodAmount: Int
+    val glucose: Float,
+    val shortInsulin: Int = 0,
+    val food: Int = 0,
+    val longInsulin: Int = 0
 )
